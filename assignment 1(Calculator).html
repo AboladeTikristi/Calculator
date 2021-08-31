@@ -1,0 +1,64 @@
+<!DOCtype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+	.button{
+		background-color: grey;
+		color:white;
+		font-family: Arial;
+
+	}
+
+	</style>
+ 
+ 	<div style="width:350px;height:500px;background-color:black;margin-left:350px;margin-top:120px;border-radius:5px;border:3px solid teal;"><br>
+ 		<h1 style="color:white;text-align:center; ">SIMPLE CALC</h1>
+	<div style="width:300px;height:100px;background-color:teal;margin-top:30px;margin-left:25px;border-radius:2px;">
+		<div style="width:300px;height:45px;background-color:teal;color:white;margin-top:3px;margin-left:0px;border-radius:2px;"id="updiv"></div>
+ 	<div style="width:300px;height:45px;background-color:teal;margin-top:10px;margin-left:0px;border-radius:2px;text-align:right;"id="answer"></div></div>
+<div style="width:300px;height:250px;margin-left:25px;margin-top:15px;background-color:;">
+	<button style="width:50px;height:50px;margin-left:165px;"class="button" onclick="allclear()">AC</button>
+	<button style="width:50px;height:50px;margin-left:29px;"class="button" onclick="oneclear()">X</button><br><br>
+ 	<button style="width:50px;height:50px;"class="button"onclick="show()">7</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">8</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">9</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">/</button><br>
+ 	<button style="width:50px;height:50px;"class="button"onclick="show()">4</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">5</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">6</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">*</button><br>
+ 	<button style="width:50px;height:50px;"class="button"onclick="show()">1</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">2</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">3</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">+</button><br>
+ 	<button style="width:50px;height:50px;"class="button"onclick="show()">0</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">.</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button"onclick="show()">-</button>
+ 	<button style="width:50px;height:50px;margin-left:29px;"class="button" onclick="total()">=</button><br>
+
+ </div>
+ 	</div>
+ 	<script type="text/javascript">
+const show = ()=>{
+	var a=document.getElementsByClassName("button");
+updiv.innerText+=event.target.innerText;
+}
+const total = ()=>{
+answer.innerText=eval(updiv.innerText);
+}
+const allclear = ()=>{
+	updiv.innerText="";
+	answer.innerText="";
+}
+const oneclear = ()=>{
+	
+	updiv.innerText=updiv.innerText.slice(0,-1);
+	answer.innerText=answer.innerText.slice(0,-1);
+}
+</script>
+</body>
+
+</html>
